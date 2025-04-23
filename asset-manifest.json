@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/WebDroid/static/css/main.cd826e89.css",
+    "main.js": "/WebDroid/static/js/main.720978bd.js",
+    "static/js/453.378a9801.chunk.js": "/WebDroid/static/js/453.378a9801.chunk.js",
+    "index.html": "/WebDroid/index.html",
+    "main.cd826e89.css.map": "/WebDroid/static/css/main.cd826e89.css.map",
+    "main.720978bd.js.map": "/WebDroid/static/js/main.720978bd.js.map",
+    "453.378a9801.chunk.js.map": "/WebDroid/static/js/453.378a9801.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd826e89.css",
+    "static/js/main.720978bd.js"
+  ]
+}
