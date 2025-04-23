@@ -1,0 +1,20 @@
+.back-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .App-title {
+    font-size: 2rem;
+    font-weight: var(--font-bold);
+    color: var(--title-color);
+  }
+  
+  .App-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+  }

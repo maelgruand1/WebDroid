@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Home from './components/Home';
+import Recent from './components/Recent';
+import StatusBar from './components/StatusBar';
+import Back from './components/Back';
+import TextEditor from './components/TextEditor';
 
 function App() {
+  const [status, setStatus] = useState<'home' | 'recent' | 'back' | 'editor'>('home');
+
+  const renderScreen = () => {
+    switch (status) {
+      case 'home':
+        return <Home openApp={setStatus} />;
+      case 'recent':
+        return <Recent />;
+      case 'back':
+        return <Back />;
+      case 'editor':
+        return <TextEditor />;
+      default:
+        return null;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="phone-frame">
+      <div className="screen">
+        {renderScreen()}
+      </div>
+      <StatusBar setStatus={setStatus} />
     </div>
   );
 }

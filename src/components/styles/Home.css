@@ -1,0 +1,12 @@
+.home-screen {
+    position: relative; /* C’EST LA CLÉ POUR LA SYSTEMBAR */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden; /* pour éviter que la barre sorte */
+  }
+  
