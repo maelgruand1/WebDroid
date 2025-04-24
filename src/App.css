@@ -2,7 +2,9 @@
 
 .phone-frame {
   width: 30vw;
+  max-width: 350px;
   height: 90vh;
+  max-height: 700px;
   background: #000;
   border: 10px solid #333;
   border-radius: 40px;
@@ -21,6 +23,8 @@
   justify-content: center;
   align-items: center;
   color: white;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .App-title {
@@ -36,9 +40,35 @@
   text-align: center;
   color: #ccc;
 }
-@media (max-width: 420px) {
+
+@media (max-width: 768px) {
   .phone-frame {
-    transform: scale(0.9);
-    margin: 20px auto;
+    width: 60vw;
+    height: 80vh;
+  }
+
+  .App-title {
+    font-size: 1.5rem;
+  }
+
+  .App-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .phone-frame {
+    width: 90vw;
+    height: 80vh;
+    border-width: 6px;
+    border-radius: 30px;
+  }
+
+  .App-title {
+    font-size: 1.2rem;
+  }
+
+  .App-subtitle {
+    font-size: 0.85rem;
   }
 }

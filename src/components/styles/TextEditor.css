@@ -109,3 +109,47 @@
   color: #888;
   margin-top: 4px;
 }
+textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+textarea:focus {
+  border-color: #4a90e2;
+  background-color: #fff;
+  outline: none;
+}
+
+textarea:disabled {
+  background-color: #eee;
+  color: #888;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #3a78c2;
+}
+
+button:disabled {
+  background-color: #a0c0e0;
+  cursor: not-allowed;
+}
