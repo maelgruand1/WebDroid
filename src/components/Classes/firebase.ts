@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth"; // 🔥 Ajout
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBthzUVgp8AFGl6osPxUdEdN-zhxy5Op0o",
+  apiKey: "API_KEY_GOOGLE",
   authDomain: "webdroid-react-2025.firebaseapp.com",
   projectId: "webdroid-react-2025",
   storageBucket: "webdroid-react-2025.firebasestorage.app",
