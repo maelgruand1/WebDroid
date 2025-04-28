@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+// src/App.tsx
+
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import RequireAuth from "./components/Register"; // Vérifie l'authentification
-import Signup from './components/Signup'; // Importation de Signup
-import Home from './components/Home';
-import Recent from './components/Recent';
-import StatusBar from './components/StatusBar';
-import Back from './components/Back';
-import TextEditor from './components/TextEditor';
+
+import RequireAuth from "./components/Register";
+import Signup from './components/Signup';
+import PhoneUI from './components/PhoneUI';
 import { User } from './components/Classes/User';
 
 function App() {
@@ -15,6 +14,15 @@ function App() {
   const handleSignupSuccess = (newUser: User) => {
     setUser(newUser);
   };
+
+  // ➔ Facultatif : demander la permission de Notifications
+  useEffect(() => {
+    if ('Notification' in window) {
+      Notification.requestPermission().then(permission => {
+        console.log('Notification permission:', permission);
+      });
+    }
+  }, []);
 
   return (
     <>
@@ -28,37 +36,5 @@ function App() {
     </>
   );
 }
-
-type MainAppProps = {
-  user: User;
-};
-
-const PhoneUI: React.FC<MainAppProps> = ({ user }) => {
-  const [status, setStatus] = useState<'home' | 'recent' | 'back' | 'editor'>('home');
-
-  const renderScreen = () => {
-    switch (status) {
-      case 'home':
-        return <Home openApp={setStatus} user={user} />;
-      case 'recent':
-        return <Recent user={user} />;
-      case 'back':
-        return <Back user={user} />;
-      case 'editor':
-        return <TextEditor user={user} />;
-      default:
-        return null;
-    }
-  };
-
-  return (
-    <div className="phone-frame">
-      <div className="screen">
-        {renderScreen()}
-      </div>
-      <StatusBar setStatus={setStatus} />
-    </div>
-  );
-};
 
 export default App;

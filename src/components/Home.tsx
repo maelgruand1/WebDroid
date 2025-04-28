@@ -21,8 +21,8 @@ function Home({ openApp, user }: Props) {  // Ajouter `user` dans les props de `
 
       <div className="app-grid">
         <div className="app-icon" onClick={() => openApp('editor')}>
-          <img src={textIcon} alt="Text Editor" />
-          <span>Ven (Text Editor)</span>
+          <img src={textIcon} alt="Text Editor"  data-title="Ven (Text-Editor)"/>
+          
         </div>
       </div>
     </div>

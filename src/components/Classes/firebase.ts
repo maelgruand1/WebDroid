@@ -7,7 +7,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyBthzUVgp8AFGl6osPxUdEdN-zhxy5Op0o",
   authDomain: "webdroid-react-2025.firebaseapp.com",
   projectId: "webdroid-react-2025",
-  storageBucket: "webdroid-react-2025.firebasestorage.app",
+  storageBucket: "webdroid-react-2025.appspot.com", // 🛠 Correction ici
   messagingSenderId: "480667434855",
   appId: "1:480667434855:web:ddc9d3f61f59381f9479c2",
   measurementId: "G-RQHP1ZGPPG"
@@ -15,6 +15,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const auth = getAuth(app); // 🔥 Initialisation correcte
+const auth = getAuth(app);
 
-export { db, auth }; // 🔥 Exporte aussi l'auth
+export { db, auth };

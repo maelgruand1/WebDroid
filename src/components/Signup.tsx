@@ -7,7 +7,7 @@ import Login from './Login';
 
 type Props = {
   onSignupSuccess: (user: User) => void;
-};
+}; 
 
 const Signup: React.FC<Props> = ({ onSignupSuccess }) => {
   const [email, setEmail] = useState('');
@@ -31,6 +31,7 @@ const Signup: React.FC<Props> = ({ onSignupSuccess }) => {
 
       const user = new User(firebaseUser.uid, name, username);
       onSignupSuccess(user);
+
     } catch (error) {
       console.error("Erreur d'inscription :", error);
       alert("Erreur d'inscription !");
