@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from "react";
 import './styles/StatusBar.css';
 import home from './images/icons/home.png';
@@ -9,6 +10,32 @@ type Props = {
 };
 
 function StatusBar({ setStatus }: Props) {
+=======
+import React, { useState } from "react";
+import recent from './images/recent.png';
+import home from './images/home.png';
+import back from './images/back.png';
+import Home from "./Home";
+import Recent from "./Recent";
+import './styles/StatusBar.css';
+
+function StatusBar() {
+  const [status, setStatus] = useState('home');
+  switch(status){
+    case 'home':
+        <Home/>
+        break;
+    case 'back':
+        <Home/>
+        break;
+    case 'recent':
+        <Recent/>
+        break;
+        <Home/>
+        break;
+  
+  }         
+>>>>>>> Stashed changes
   return (
     <div className="status-bar">
       <div className="nav-icon" onClick={() => setStatus('back')}>

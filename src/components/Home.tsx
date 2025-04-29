@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // /components/Home.tsx
 
 import React from 'react';
@@ -26,5 +27,18 @@ function Home({ openApp }: Props) {
     );
   }
   
+=======
+import React from 'react';
+import './styles/Home.css';
+
+function Home() {
+  return (
+    <div className="home-screen">
+      <h1 className="App-title">WebDroid</h1>
+      <p className="App-subtitle">Bienvenue sur votre Android du futur</p>
+    </div>
+  );
+}
+>>>>>>> Stashed changes
 
 export default Home;
